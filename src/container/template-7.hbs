@@ -1,0 +1,82 @@
+        
+                      <header class='header row g-0'>
+                              <div class="logo_cont col-3">
+                                  {{>logo_dark}}
+                                </div>
+                        <nav class='header_nav col-9' >
+                            <div class="nav_right">
+                              {{>nav_dark links=header.links}}
+                            </div>
+                        </nav>
+                      
+                     </header> 
+
+                          <div class="ad_row">
+                                  <div class="ad_item">
+                                    <div class="ad_logo ">Ad</div>
+                                    <div class="ad_text">
+                                      <a href="{{header.ad.url}}">{{header.ad.text}}</a>
+                                    </div>
+                                  </div>
+                              <div class="usr_online">User online:10</div>
+                           </div>
+                         
+                         
+                          <main class="main">
+                            <div class="main_wrap">
+                              <div class="hero_row">
+                                {{#with hero}}
+                                <div class="hero_title">{{title}}</div>
+                                <div class="hero_desr">{{description}}</div>
+                                <a class="hero_btn"  href="{{button.url}}">{{button.text}}</a>
+                                {{/with}}
+                              </div>
+                              <div class="about_row">
+                                {{#with about}}
+                                <div class="about_header">{{heading}}</div>
+                                <div class="about_info">{{info}}</div>
+                                {{/with}}
+                              </div>
+                            </div>
+                          </main>
+                         
+
+                  <div class="art_block">
+                    <div class="art_header">
+                      <h3 class="art_header_title">Our Articles</h3>
+                      <a href="#" class="art_button">View All</a>
+                    </div>
+                          <div class="art_row">
+                            {{#each articles}}
+                            <div class="art_card">
+                                <div class="art_photo">
+                                      <img src="{{photo}}" alt="{{id}}">
+                                      {{#if  isNew}}
+                                        <div class="is_new">New</div>
+                                      {{/if}}
+                                </div>
+                                <div class="art_card_name">{{name}}</div>
+                                <div class="art_card_description">{{description}}</div>
+                                 <div class="art_card_btn">Read All</div>
+                            </div>
+                           
+                          {{/each}}
+                          </div>
+                    
+                  </div>
+
+                    <footer class="row footer g-0">
+                       <div class="footer_menu">
+                              {{#each footer.pages}}
+                              <div class="footer_item col-3">
+                                  <a href="{{this.path}}" class="item_a">{{this.name}}</a>  
+                                 
+                              </div>
+                              {{/each}}
+                        </div> 
+                          <div class="col-3">
+                             <span class="footer_copyright">{{footer.copyright}}</span> 
+                          </div>
+                    </footer>
+           
+ 

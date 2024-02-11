@@ -26,12 +26,6 @@ body {
  * Render the `main` element consistently in IE.
  */
 
-main {
-  display: block;
-  -ms-overflow-style: none; /* IE и Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
@@ -375,13 +369,12 @@ input[type='submit'] {
   background: none;
 }
 
-input,
 label,
 select,
 button,
 textarea {
   margin: 0;
-  border: 0;
+
   padding: 0;
   display: inline-block;
   vertical-align: middle;
@@ -535,7 +528,6 @@ legend,
 li,
 mark,
 menu,
-nav,
 object,
 ol,
 output,
@@ -578,11 +570,6 @@ footer,
 header,
 hgroup,
 menu,
-nav,
-section {
-  display: block;
-}
-
 body {
   line-height: 1;
 }
@@ -697,9 +684,7 @@ textarea {
 button,
 input {
   line-height: normal;
-  padding: 0;
-  border: 0;
-  background: 0;
+
   box-shadow: 0 0 0 transparent;
 }
 

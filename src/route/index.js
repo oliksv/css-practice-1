@@ -1250,5 +1250,13 @@ router.get('/slack', function (req, res) {
     layout: null,
   })
 })
+router.get('/dashboard', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('dashboard', {
+    layout: null,
+  })
+})
 // Підключаємо роутер до бек-енду
 module.exports = router
